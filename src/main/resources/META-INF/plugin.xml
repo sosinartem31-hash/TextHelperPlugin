@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>com.sosin.texthelper</id>
+    <name>TextHelper</name>
+    <vendor email="sosin@itmo.ru" url="https://itmo.ru">Сосин Артём M3115</vendor>
+
+    <description><![CDATA[
+    Лабораторная работа №3 по дисциплине ИСРПО.<br>
+    Плагин для подсчёта символов и преобразования выделенного текста в UPPERCASE.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action id="com.sosin.texthelper.ConvertCaseAction"
+                class="org.example.ConvertCaseAction"
+                text="TextHelper: Convert to UPPERCASE"
+                description="Converts selected text to uppercase and shows length">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="control alt U"/>
+        </action>
+    </actions>
+</idea-plugin>
